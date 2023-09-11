@@ -1,0 +1,93 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-4 text-center">
+                <span class="text-success"><i class="fa-solid fa-user-plus"></i></span> &nbsp;Contact Details
+            </h1>
+            <p class="mt-4 text-align:justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                dicta rem facilis quibusdam debitis
+                error eaque, libero repellat. Rerum laudantium minima molestias expedita distinctio at vitae repellendus
+                fugit tempore voluptates!Quibusdam quisquam libero ipsa delectus labore excepturi laudantium? Quia ea
+                ipsa, perspiciatis
+                asperiores fugiat sit est incidunt, dolorem, sapiente cupiditate eos tempora. Beatae quis, ut commodi
+                minima repellendus laboriosam sed.</p>
+        </div>
+    </div>
+</div>
+<!-- to test  -->
+<!-- <pre>
+    {{contact|json}}
+</pre> -->
+
+
+<!-- add contact form design -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8" >
+            <!-- contact form -->
+            <form class="border p-3 rounded mb-5">
+                <!-- id -->
+                <div class="mb-2">
+                    <input type="text" name="id" [(ngModel)]="contact.id" placeholder="Contact ID" class="form-control">
+                </div>
+                <!-- name -->
+                <div class="mb-2">
+                    <input type="text"  name="name" [(ngModel)]="contact.name" placeholder="Contact Name" class="form-control">
+                </div>
+                <!-- image -->
+                <div class="mb-2">
+                    <input type="text"  name="photo" [(ngModel)]="contact.photo" placeholder="Contact Image" class="form-control">
+                </div>
+                <!-- email -->
+                <div class="mb-2">
+                    <input type="text"  name="email" [(ngModel)]="contact.email" placeholder="Contact Email ID" class="form-control">
+                </div>
+                <!-- mobile -->
+                <div class="mb-2">
+                    <input type="text"  name="mobile" [(ngModel)]="contact.mobile" placeholder="Contact Mobile" class="form-control">
+                </div>
+                <!-- Company -->
+                <div class="mb-2">
+                    <input type="text"  name="company" [(ngModel)]="contact.company"placeholder="Contact Company Name" class="form-control">
+                </div>
+                    <!--Title -->
+                    <div class="mb-2">
+                        <input type="text"  name="title" [(ngModel)]="contact.title"placeholder="Title" class="form-control">
+                    </div>
+                <!-- group dropdown -->
+                <div class="mb-2">
+                    <select name="groupId" [(ngModel)]="contact.groupId" class="form-control">
+                        <option selected hidden disabled>{{contact.groupId}}</option>
+                        <option [value]="group.id" *ngFor="let group of allgroups">{{group.name}}</option>
+                       
+
+                    </select>
+                </div>
+
+                <!-- button for submit and  close -->
+
+                <div class="me-3">
+                    <input type="button" (click)="addcontact()" value="Create" class="btn btn-success me-3">
+                    <a routerLink="" class="btn btn-warning">Close</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4 mt-5">
+            <!-- display selected contact image -->
+
+            <img height="180px" width="200px"
+                [src]="contact.photo"
+                alt="contact-image">
+
+        </div>
+
+
+        <!-- <div class="col-4">
+            <img height="180px" width="200px"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYGBYvo8goNXk29xRXR4IcU9uRAH8vkhyN8Y1wHeSxAUjSxAUe3LUnZ2ZXF9H7cjSwEmg&usqp=CAU"
+                alt="contact-image">
+        </div> -->
+    </div>
+</div>
+<!--                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYGBYvo8goNXk29xRXR4IcU9uRAH8vkhyN8Y1wHeSxAUjSxAUe3LUnZ2ZXF9H7cjSwEmg&usqp=CAU"
+ -->

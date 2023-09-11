@@ -1,0 +1,40 @@
+<div>
+    <h1 class="text-center text-dark">
+        <span class=" text-primary">  <i class="fa-solid fa-user "></i></span> &nbsp;View-Contact
+    </h1>
+</div>
+<div>
+    <p class="text-justify p-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam debitis soluta nemo
+        assumenda itaque cumque odit,
+        repellat officiis est distinctio. Repudiandae culpa voluptates sed quisquam eius corrupti laborum quam
+        natus.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam debitis soluta nemo assumenda itaque
+        cumque odit,
+        repellat officiis est distinctio.
+    </p>
+</div>
+<div class="container mt-4 mb-5">
+    <div class="row border align-items-center p-5">
+        <div class="col-lg-4 text-center">
+            <img height="180px" width="200px"
+                [src]="contact.photo"
+                [alt]="contact.name">
+            <br>
+            <a routerLink="" class="btn btn-warning mt-2"><i class="fa-solid fa-circle-arrow-left">&nbsp;</i><b>Go Back</b></a>
+        </div>
+        <div class="col-lg-8">
+            <ul class="list-group">
+                <li class="list-group-item">Id:<strong>{{contact.id}}</strong></li>
+
+                <li class="list-group-item">Name:<strong>{{contact.name}}</strong></li>
+                <li class="list-group-item">E mail:<strong>{{contact.email}}</strong></li>
+                <li class="list-group-item">Mobile:<strong>{{contact.mobile}}</strong></li>
+                <li class="list-group-item">Company:<strong>{{contact.company}}</strong></li>
+                <li class="list-group-item">Title:<strong>{{contact.title}}</strong></li>
+
+                <li class="list-group-item">Group:<strong>{{groupname}}</strong></li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
